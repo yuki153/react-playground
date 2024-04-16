@@ -2,6 +2,7 @@
 import { FormControl, FormHelperText, Input, InputLabel, TextField, useFormControl } from '@mui/material';
 import React, { useState } from 'react';
 import { useForm, Controller } from "react-hook-form"
+import { MultipleSelectChip } from "@/features/form/multiple-select-chip"
 
 const FormStatus = () => {
     const value = useFormControl();
@@ -77,6 +78,10 @@ const Page = () => {
                         <FormHelperText id="my-helper-text2">We'll never share your email.</FormHelperText>
                     </FormControl>
                 </section> */}
+                <section className='w-full flex flex-col gap-y-2'>
+                    <h2>Form Control:3</h2>
+                    <MultipleSelectChip />
+                </section>
             </div>
         </div>
     );
