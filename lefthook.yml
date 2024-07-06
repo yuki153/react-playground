@@ -1,7 +1,6 @@
 pre-commit:
   parallel: true
   commands:
-
     prettier:
       glob: "*.yml"
       run: pnpm prettier --write {staged_files}
@@ -17,3 +16,8 @@ pre-commit:
       skip:
         - merge
         - rebase
+
+post-merge:
+  commands:
+    pnpm_install:
+      run: git diff HEAD^1 HEAD --name-only | grep -e src -e package.json > /dev/null && pnpm i
