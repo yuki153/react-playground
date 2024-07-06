@@ -1,3 +1,5 @@
+// test comment
+
 const fs = require('fs');
 const path = require('path');
 
