@@ -1,0 +1,19 @@
+pre-commit:
+  parallel: true
+  commands:
+
+    prettier:
+      glob: "*.yml"
+      run: pnpm prettier --write {staged_files}
+      stage_fixed: true
+      skip:
+        - merge
+        - rebase
+
+    biome:
+      glob: "*.{js,jsx,ts,tsx,json,jsonc}"
+      run: pnpm biome check --write {staged_files}
+      stage_fixed: true
+      skip:
+        - merge
+        - rebase

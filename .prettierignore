@@ -1,0 +1,16 @@
+# format by biome
+*.js
+*.jsx
+*.json
+*.ts
+*.tsx
+
+# due to trimming spaces
+*.md
+*.mdx
+
+pnpm-lock.yaml
+
+.next
+.swc
+.turbo

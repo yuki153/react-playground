@@ -1,0 +1,47 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "organizeImports": {
+    // import/order の代替
+    "enabled": true
+  },
+  "files": {
+    "ignore": [
+      ".next/*",
+      "out/*",
+      "dist/*"
+    ]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": false,
+      "correctness": {
+        // 未使用の import を除去 (same as: unused-imports/no-unused-imports)
+        "noUnusedImports": "error"
+      },
+      "style": {
+        // "@typescript-eslint/consistent-type-imports" の代替
+        "useImportType": "error"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 120
+  },
+  "javascript": {
+    "formatter": {
+      "trailingCommas": "es5"
+    }
+  },
+  "json": {
+    "parser": {
+      // @see https://github.com/biomejs/biome/issues/926
+      "allowTrailingCommas": true
+    },
+    "formatter": {
+      "trailingCommas": "none"
+    }
+  }
+}
