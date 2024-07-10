@@ -1,8 +1,23 @@
-import parse from "html-react-parser";
-import { reactElement } from "static-html/test1";
+import Link from "next/link";
 
 const Page = () => {
-  return <div>{parse(reactElement)}</div>;
+  return (
+    <div>
+      <h1>Document Root</h1>
+      <p>page links</p>
+      <ul>
+        <li>
+          <Link href="/html-react-parser/test1">test1</Link>
+        </li>
+        <li>
+          <Link href="/html-react-parser/test2">test2</Link>
+        </li>
+        <li>
+          <Link href="/html-react-parser/test-login">test-login</Link>
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 export default Page;
