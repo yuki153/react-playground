@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const Page = () => {
+  console.log("test3/page.tsx");
   return (
     <div>
       <h1>Document Root</h1>
