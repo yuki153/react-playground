@@ -15,6 +15,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  console.log("test/layout.tsx");
   return (
     <html lang="ja">
       <AppRouterCacheProvider>
