@@ -7,7 +7,6 @@ import { Controller, useForm } from "react-hook-form";
 
 const FormStatus = () => {
   const value = useFormControl();
-  console.log("test/useFormControl");
   return (
     <ul className="text-xs">
       <li>focused: {value?.focused ? "focused" : "not focused"}</li>
@@ -28,7 +27,7 @@ const Page = () => {
     setEmail(event.target.value.length);
   };
   const isError = email > 10;
-  console.log(watch("email"));
+
   return (
     <div className="flex min-h-screen flex-col p-24 bg-white text-black">
       <h1>Form</h1>
