@@ -32,6 +32,7 @@ const names = [
 
 export const MultipleSelectChip = () => {
   const [personName, setPersonName] = React.useState<string[]>([]);
+  console.log("test/multiple-select-chip");
 
   const handleChange = (event: SelectChangeEvent<typeof personName>) => {
     const {
