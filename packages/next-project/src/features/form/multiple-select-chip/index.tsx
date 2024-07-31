@@ -1,12 +1,10 @@
-import * as React from 'react';
-import { Theme, useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import Chip from '@mui/material/Chip';
+import Chip from "@mui/material/Chip";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import Select, { type SelectChangeEvent } from "@mui/material/Select";
+import * as React from "react";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -20,34 +18,32 @@ const MenuProps = {
 };
 
 const names = [
-  'Oliver Hansen',
-  'Van Henry',
-  'April Tucker',
-  'Ralph Hubbard',
-  'Omar Alexander',
-  'Carlos Abbott',
-  'Miriam Wagner',
-  'Bradley Wilkerson',
-  'Virginia Andrews',
-  'Kelly Snyder',
+  "Oliver Hansen",
+  "Van Henry",
+  "April Tucker",
+  "Ralph Hubbard",
+  "Omar Alexander",
+  "Carlos Abbott",
+  "Miriam Wagner",
+  "Bradley Wilkerson",
+  "Virginia Andrews",
+  "Kelly Snyder",
 ];
-
 
 export const MultipleSelectChip = () => {
   const [personName, setPersonName] = React.useState<string[]>([]);
+  console.log("test/multiple-select-chip");
 
   const handleChange = (event: SelectChangeEvent<typeof personName>) => {
     const {
       target: { value },
     } = event;
-    setPersonName(
-      typeof value === 'string' ? value.split(',') : value,
-    );
+    setPersonName(typeof value === "string" ? value.split(",") : value);
   };
-  
+
   const deleteHandler = (value: string) => () => {
     setPersonName((_state) => _state.filter((_value) => _value !== value));
-  }
+  };
 
   return (
     <div>
@@ -63,17 +59,21 @@ export const MultipleSelectChip = () => {
           renderValue={(selected) => (
             <div className="flex flex-wrap gap-2">
               {selected.map((value) => (
-                <Chip key={value} label={value} onMouseDown={(event) => {event.stopPropagation();}} onDelete={deleteHandler(value)} />
+                <Chip
+                  key={value}
+                  label={value}
+                  onMouseDown={(event) => {
+                    event.stopPropagation();
+                  }}
+                  onDelete={deleteHandler(value)}
+                />
               ))}
             </div>
           )}
           MenuProps={MenuProps}
         >
           {names.map((name) => (
-            <MenuItem
-              key={name}
-              value={name}
-            >
+            <MenuItem key={name} value={name}>
               {name}
             </MenuItem>
           ))}
@@ -81,4 +81,4 @@ export const MultipleSelectChip = () => {
       </FormControl>
     </div>
   );
-}
+};
