@@ -7,7 +7,6 @@ import { Controller, useForm } from "react-hook-form";
 
 const FormStatus = () => {
   const value = useFormControl();
-  console.log("test/useFormControl");
   return (
     <ul className="text-xs">
       <li>focused: {value?.focused ? "focused" : "not focused"}</li>
