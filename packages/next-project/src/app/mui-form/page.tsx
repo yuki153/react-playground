@@ -59,8 +59,8 @@ const Page = () => {
               },
             }}
             render={({ field, fieldState, formState }) => {
-              console.log("formState", formState.errors.email);
-              console.log("fieldState", fieldState.error);
+              console.log("formState:", formState.errors.email);
+              console.log("fieldState:", fieldState.error);
               return (
                 <FormControl fullWidth error={!!fieldState.error?.message}>
                   <InputLabel htmlFor="my-input2">Email address</InputLabel>
