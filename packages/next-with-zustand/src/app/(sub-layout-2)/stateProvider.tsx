@@ -29,10 +29,13 @@ export const StateProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <CountActionsContext value={actions}>
       <CountValueContext value={count}>
-        <p>
-          StateProvider render {pathname} / count: {count}
-        </p>
-        {children}
+        <section className="rounded-xl border-2 border-indigo-400 bg-indigo-50 p-4">
+          <span className="inline-block rounded bg-indigo-500 px-2 py-0.5 text-xs font-bold text-white">
+            StateProvider (count: {count})
+          </span>
+          <p className="mt-1 text-xs text-indigo-700">{pathname}</p>
+          <div className="mt-3">{children}</div>
+        </section>
       </CountValueContext>
     </CountActionsContext>
   );

@@ -8,11 +8,11 @@ const blockFor = (ms: number) => {
 };
 
 export const Other = ({ className }: { className?: string }) => {
-  blockFor(3000);
+  blockFor(1000);
   console.log("Other render");
   return (
     <div className={`rounded-xl border border-gray-300 bg-gray-50 p-5 ${className ?? ""}`}>
-      <p className="text-sm font-medium text-gray-600">Other (レンダリングに 3000ms かかる)</p>
+      <p className="text-sm font-medium text-gray-600">Other (レンダリングに 1000ms かかる)</p>
     </div>
   );
 };

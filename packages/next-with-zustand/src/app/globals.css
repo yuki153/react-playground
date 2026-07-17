@@ -12,12 +12,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/*
+ * このアプリは明るいボックス基調（bg-*-50/100 に暗い文字）の light 専用デザインのため、
+ * OS のダークモードで foreground が明るい色に反転すると、明るいボックス上で文字が
+ * 見えなくなる。テーマを light に固定してコントラストを保つ。
+ */
 
 body {
   background: var(--background);

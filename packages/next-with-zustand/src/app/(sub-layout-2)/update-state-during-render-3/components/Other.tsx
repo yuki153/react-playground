@@ -11,8 +11,10 @@ export const Other = ({ className }: { className?: string }) => {
   blockFor(200);
   console.log("Other render");
   return (
-    <div className={`rounded-xl border border-gray-300 bg-gray-50 p-5 ${className ?? ""}`}>
-      <p className="text-sm font-medium text-gray-600">Other (レンダリングに 200ms かかる)</p>
+    <div className={`rounded-lg border border-amber-300 bg-amber-50 p-4 ${className ?? ""}`}>
+      <span className="inline-block rounded bg-amber-500 px-2 py-0.5 text-xs font-bold text-white">
+        Other (render 200ms)
+      </span>
     </div>
   );
 };

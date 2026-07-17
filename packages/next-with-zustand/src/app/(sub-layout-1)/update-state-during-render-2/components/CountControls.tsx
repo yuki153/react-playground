@@ -15,7 +15,9 @@ export function CountControls() {
 
   return (
     <div className="rounded-lg border border-green-300 bg-green-50 p-4">
-      <p className="text-sm font-medium text-green-700">CountControls (count を更新)</p>
+      <span className="inline-block rounded bg-green-600 px-2 py-0.5 text-xs font-bold text-white">
+        CountControls (write)
+      </span>
       <div className="mt-3 flex gap-2">
         <button
           onClick={increment}

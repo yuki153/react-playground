@@ -9,7 +9,7 @@ export default function Page() {
   });
   return (
     <div className="mx-auto max-w-md p-8">
-      <h1 className="mb-6 text-2xl font-bold">update-state-during-render-3 (useState + context)</h1>
+      <h1 className="mb-6 text-2xl font-bold text-gray-900">update-state-during-render-3 (useState + context)</h1>
       <Counter />
     </div>
   );
