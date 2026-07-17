@@ -6,6 +6,12 @@ export function CountControls() {
   const increment = useCountStore((state) => state.increment);
   const decrement = useCountStore((state) => state.decrement);
   const reset = useCountStore((state) => state.reset);
+  console.log("CountControls render (update-state-during-render)");
+
+  // update-state-during-render の例として、レンダリング中に state を更新する
+  // これは React のルールに反するため、通常は避けるべきです。
+  // ここではあくまで例として示しています。
+  increment();
 
   return (
     <div className="rounded-lg border border-green-300 bg-green-50 p-4">

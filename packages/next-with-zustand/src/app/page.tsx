@@ -7,7 +7,23 @@ export default function Home() {
       <nav>
         <ul>
           <li>
-            <Link href="/update-state-during-render">update-state-during-render</Link>
+            <Link href="/update-state-during-render-1">update-state-during-render-1</Link>
+          </li>
+          <li>
+            <Link href="/sub-layout-home-1">sub-layout-home-1</Link>
+            <ul>
+              <li>
+                <Link href="/update-state-during-render-2">update-state-during-render-2</Link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link href="/sub-layout-home-2">sub-layout-home-2</Link>
+            <ul>
+              <li>
+                <Link href="/update-state-during-render-3">update-state-during-render-3</Link>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
